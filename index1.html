@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function decompte(n){
+        console.log(n)
+        if(n===0){
+          return
+        }
+      
+      setTimeout(()=>{
+        decompte(n-1)
+      },1000)
+    }
+      decompte(3)
+      // let i=0
+      // const t=  setInterval(
+        
+      //   ()=> { 
+      //     i++
+      //     console.log("afficher un message un certains nombres de fois")
+      //     if(i>=5) {
+      //       clearInterval(t)
+      //     }
+      //   },
+      //   2000
+      // );
+      // les timers
+      /*function wait(duration){
+        const t=Date.now()
+        while(Date.now()-t< duration){
+
+        }
+      }
+      console.log("bonjour ")
+      //wait(5000)
+      setTimeout(()=>
+        console.log("bonjour les genre")
+      ,1000)
+      console.log("au revoir les gens")
+      const p=prompt("veilllez entrer votre nom")*/
+
+      // factorille
+      /* const n = prompt("entrez votre nombre")*1
+       function factorial(n){
+        let resultat=1
+         for(let i=n;i>0;i--){
+          resultat*= i 
+         }
+        return resultat
+       }
+      
+       console.log( factorial(n))*/
+
+      // const tab=[12,17,18,2,6 ]
+      // for( let note of tab){
+      //  const badnote=  tab.filter((note)=>note<10)
+      //   console.log(badnote)
+      // }
+      // const goodnotes= tab.filter((note)=>note>=10)
+      // console.log(goodnotes)
+      //   class book{
+
+      //     #page = 1
+      //     #books=[]
+
+      //     constructor(tittle,pages){
+      //       this.tittle=tittle
+      //       this.pages=pages
+
+      //     }
+      //     get page (){
+      //       return this.#page
+      //     }
+      //     nextpage() {
+      //       if(this.#page < this.pages){
+      //        this.#page++
+      //       }
+      //     }
+      //     close(){
+      //       this.#page=1
+      //     }
+      //     addbook(book){
+      //       this.#books.push(book)
+      //     }
+      //     addbooks(book){
+      //       this.#books.addbook(book)
+      //     }
+      //   }
+      //   const r=new book('seigneur des anneaux',200)
+      //   console.log(r.page)
+      //  console.log(r.nextpage())
+      //  console.log(r.page)
+      //  console.log(r.close())
+      //  console.log(r.page)
+
+      // class rectangle {
+      //   constructor(width, heigth) {
+      //     if (width <= 0 || heigth <= 0) {
+      //       throw new Error(
+      //         "Impossible d'avoir une forme géometrique avec des dimensions négatives"
+      //       );
+      //     }
+      //     this.width = width;
+      //     this.heigth = heigth;
+      //   }
+      //   get perimeter() {
+      //     return (this.width + this.heigth) * 2;
+      //   }
+      //   isbidder(shape) {
+      //     return this.perimeter > shape.perimeter;
+      //   }
+      //   get isvalid() {
+      //     return this.width > 0 && this.heigth > 0;
+      //   }
+      // }
+      // class square extends rectangle {
+      //   constructor(width) {
+      //     super(width, width);
+      //   }
+      // }
+
+      //   try {
+      //   const width = prompt("entrez votre largeur") * 1;
+      //   const heigth = prompt("entrez votre hauteur") * 1;
+      //   const r = new rectangle(width, heigth);
+      //  console.log(r.perimeter)
+      //   }
+      // catch (e) {
+      //   console.log("on ne peut pas consruire cette forme géométrique")
+      //   //throw new Error(" entrée utilisateur invalide")
+
+      // }
+
+      // const moyenne=(notes) => {
+      //   let sum = 0;
+      //   for (let note of notes) {
+      //     sum += note;
+      //     }
+      //   return sum / notes.length;
+      // };
+      // class student {
+      //   ecole = "jule ferry";
+      //   constructor(firstname, lastname) {
+      //     this.firstname = firstname;
+      //     this.lastname = lastname;
+      //   }
+      //   setnote(notes) {
+      //     this.notes = notes;
+      //   }
+      //   canpass() {
+      //     return moyenne(this.notes) >= 10;
+      //   }
+      // }
+      // const john = new student("john", "Doe");
+      // const jane = new student("jane", "Doe");
+      // john.setnote([10, 10, 9]);
+      // john.setnote([15, 18, 19]);
+      // console.log(john.canpass(), jane.canpass());
+
+      /*  const phrase =
+              "Vous savez,  moi je crois que je m'en sort bien avec du javascript";
+              const frequencies ={}
+            const words = phrase
+
+            .toLowerCase()
+            .split("")
+            for(let word of words){
+              if(frequencies[word]){
+                frequencies[word]++
+              }
+              else{
+                frequencies[word]=1
+              }
+            }
+            console.log(frequencies);
+            */
+      /*  
+            const students = [
+              {
+                name: "jane",
+                notes: [12, 8, 18, 6, 20],
+              },
+              {
+                name: "anne",
+                notes: [12, 14, 18, 20, 20],
+              },
+              {
+                name: "bignon",
+                notes: [12, 16, 18, 17, 20],
+              },
+              {
+                name: "leticia",
+                notes: [12, 8, 18, 16, 20],
+              },
+              {
+                name: "jane",
+                notes: [12, 8, 18, 6, 20],
+              },
+            ];
+            const comparestudents=(a,b)=>{
+              return b.moyenne - a.moyenne
+            }
+            const moyenne = (notes) => {
+              let sum = 0;
+              for (let note of notes) {
+                sum += note;
+              }
+              return sum / notes.length;
+            };
+      for( let student of students){
+        student.moyenne=moyenne(student.notes)
+        student.best=Math.max(...student.notes)
+        student.worst=Math.min(...student.notes)
+      }
+      students.sort(comparestudents)
+      console.log (`
+      1:${students[0].name} avec une moyenne de ${students[0].moyenne}
+      2:${students[1].name} avec une moyenne de ${students[1].moyenne}
+      3:${students[2].name} avec une moyenne de ${students[2].moyenne}
+      `)
+      console.log(students)*/
+      // function ispallendrom(mot){
+      // const reverseword=mot
+      // .split('')
+      // .reverse()
+      // .join("")
+
+      //  return mot.toUpperCase()===reverseword.toUpperCase()
+
+      // }
+      // const mots={
+      //   kayak:true ,
+      //   bonjour:false,
+      //   sos:true,
+      //   farel:false,
+      // }
+      // for(let mot in mots){
+      //   if(ispallendrom(mot)!==mots[mot]){
+      //     console.error(`ispallendrom(${mot})aurait du renvoyer `)
+      //   }
+      // }
+    </script>
+  </head>
+  <body></body>
+</html>

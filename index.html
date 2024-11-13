@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document1</title>
+    <script>
+      // la methode fetch
+      async function fectusers() {
+        const r = await fetch("https://jsonplaceholder.typicode.com/posts");
+
+        if (r.ok === true) {
+          return r.json();
+        }
+        throw new Error(" impossible de contacter le serveur");
+      }
+      fectusers().then((Users) => console.log(Users));
+
+      // la methode fetch(contacter un serveur  pour recuperer des informations )
+
+      //les promesse
+      /*   const p= new Promise((resolve, reject) => {
+            
+        })
+      function wait(duration) {
+        return new Promise((resolve, reject) => {
+            setTimeout(()=>{
+                resolve(duration)
+            },duration)
+        })
+      }
+      function waitandfail(duration) {
+        return new Promise((resolve, reject) => {
+            setTimeout(()=>{
+                reject(duration)
+
+            }, duration)
+        })
+      }
+      
+      
+       async function main() {
+           const t =await wait(2000)
+           console.log(t)
+       }
+      Promise.any([waitandfail(1000),(2000)])
+       .then(console.log)
+       .catch(console.error)*/
+    </script>
+  </head>
+  <body></body>
+</html>
